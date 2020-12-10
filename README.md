@@ -3,7 +3,7 @@ Sistema referente ao teste da vaga developer full Stack
 
 dados para acesso.
 	Username “11234567890”,
-	Password: 
+	Password: null
 
 Front
 	Angular => dependencies => @angular/cdk": "^6.0.0",
