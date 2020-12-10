@@ -1,0 +1,40 @@
+
+<div class="my-login-page">
+  <div id="topo_auth">
+  </div>
+  <section class="h-100">
+    <div class="container h-100">
+      <div class="row justify-content-md-center h-100">
+        <div class="card-wrapper">
+          <div id="loginbox" class="tglogin card fat">
+            <div class="card-body">
+              <h4 class="card-title">ifood</h4>
+              <form>
+                <div class="form-group">
+                  <label>Login</label>
+                  <input [(ngModel)]="autenticacao.login" type="text" name="login" required class="form-control" autocomplete="off" placeholder="Login"
+                    autofocus>
+                </div>
+                <div class="form-group">
+                  <label>Senha</label>
+                  <input [(ngModel)]="autenticacao.senha" type="password" name="senha" required class="form-control" placeholder="Senha">
+                </div>               
+                <div *ngIf="returnLogin" class="form-group row alert alert-danger">
+                  <img *ngIf="load" src="assets/images/spinner/ifoodSpinner.gif" class="imgSpinnerLogin">
+                  {{returnLogin}}
+                </div>
+                <div class="form-group no-margin">
+                  <button [disabled]="load" class="btn btn-outline-primary btn-block" (click)="Logar(); $event.preventDefault()">Logar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer">
+            Copyright &copy; Rafael Carrasqueira 2020
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

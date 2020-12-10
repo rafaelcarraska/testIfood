@@ -1,0 +1,42 @@
+<nb-card>
+  <nb-card-header>
+    <div class="row">
+      <div class="col-md-6">
+        <label>Produto</label>
+      </div>
+      <div class="col-md-4 buscar form-group">
+      </div>
+      <div class="col-md-2">
+        <label class="label-btn-novo"><a (click)="Novo()"><i title="Novo" class="fa fa-plus fnteditar"
+              aria-hidden="true"></i>Novo</a></label>
+      </div>
+    </div>
+  </nb-card-header>
+  <nb-card-body>
+    <toaster-container [toasterconfig]="config"></toaster-container>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Descricao</th>
+          <th>Valor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr (dblclick)="Modal(produto)" *ngFor="let produto of listaProdutos">
+          <td>{{produto.descricao}}</td>
+          <td>{{produto.valor}}</td>
+          <td class="tdIcones">            
+            <a (click)="Modal(produto)" disabled class="btntr">
+              <i title="Editar" class="far fa-edit fnteditar" aria-hidden="true"></i>
+            </a>
+            <a (click)="Deletar(produto)" disabled class="btntr">
+              <i title="Deletar" class="fa fa-times fntdeletar" aria-hidden="true"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </nb-card-body>
+</nb-card>

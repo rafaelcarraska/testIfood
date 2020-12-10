@@ -1,0 +1,78 @@
+@import '../../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/bootstrap/breakpoints';
+
+@include nb-install-component() {
+
+  nb-card-footer {
+    padding-bottom: 0.25rem;
+
+    button {
+      @include nb-ltr(margin, 0 1rem 1rem 0);
+      @include nb-rtl(margin, 0 0 1rem 1rem);
+    }
+  }
+
+  /* stylelint-disable */
+  toaster-container /deep/ {
+    #toast-container .toast-close-button {
+      right: 0;
+    }
+  }
+  /* stylelint-enable */
+
+  @include media-breakpoint-down(xs) {
+    .dropdown-toggle {
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.tdIcones{
+  min-width: 70px;
+}
+
+.favorito {
+  color: red;
+}
+
+.naoFavorito {
+  color: gray;
+}
+
+.notification {
+  position: relative;
+  display: inline-block;
+} 
+
+.notification .badgeNota {
+  position: absolute;
+  top: -9px;
+  right: 3px;
+  padding: 4px 6px;
+  border-radius: 50%;
+  background: green;
+  color: white;
+  font-size: 66% !important;
+}
+
+.btncomment {
+  font-size: 14px !important;
+}
+
+.imgProduto{
+  max-width:250px;
+  max-height: 150px;
+}
+
+.tituloProduto{
+  padding-top: 20px;
+}
+
+.detalheProduto strong{
+  font-weight: bold;
+}
+
+.detalheProduto label{
+  margin-left: 5px;
+}
